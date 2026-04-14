@@ -1,16 +1,11 @@
+import { useTranslation } from 'react-i18next'
+
 /**
  * Footer Section — 页脚
- *
- * 4 列布局: 品牌信息 | 导航链接 | 资源链接 | 联系方式
- * 底部: 版权信息
- *
- * [PLACEHOLDER] 标记的位置需要替换为真实信息:
- *   - 邮箱地址
- *   - GitHub 主页 URL
- *   - 论文 / 出版物链接
  */
 
 function Footer() {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -21,40 +16,37 @@ function Footer() {
           <div>
             <div className="footer__brand-name">XVisualSim</div>
             <p className="footer__brand-desc">
-              A GPU-accelerated X-ray image simulation engine for industrial
-              inspection, algorithm validation, and synthetic data generation.
+              {t('footer.desc')}
             </p>
           </div>
 
           {/* 页面导航 */}
           <div>
-            <h4 className="footer__heading">Sections</h4>
+            <h4 className="footer__heading">{t('footer.sectionsTitle')}</h4>
             <ul className="footer__link-list">
-              <li><a href="#about">About</a></li>
-              <li><a href="#capabilities">Capabilities</a></li>
-              <li><a href="#pipeline">Pipeline</a></li>
-              <li><a href="#results">Results</a></li>
-              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#about">{t('navbar.about')}</a></li>
+              <li><a href="#capabilities">{t('navbar.capabilities')}</a></li>
+              <li><a href="#pipeline">{t('navbar.pipeline')}</a></li>
+              <li><a href="#results">{t('navbar.results')}</a></li>
+              <li><a href="#gallery">{t('navbar.gallery')}</a></li>
             </ul>
           </div>
 
           {/* 资源链接 */}
           <div>
-            <h4 className="footer__heading">Resources</h4>
+            <h4 className="footer__heading">{t('footer.resourcesTitle')}</h4>
             <ul className="footer__link-list">
-              {/* [PLACEHOLDER] 替换为真实链接 */}
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
-              <li><a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">Publication (coming soon)</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">Demo Video (coming soon)</a></li>
+              <li><a href="#faq">{t('navbar.faq')}</a></li>
+              <li><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">{t('footer.links.github')}</a></li>
+              <li><a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">{t('footer.links.pub')}</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">{t('footer.links.demo')}</a></li>
             </ul>
           </div>
 
           {/* 联系方式 */}
           <div>
-            <h4 className="footer__heading">Contact</h4>
+            <h4 className="footer__heading">{t('footer.contactTitle')}</h4>
             <ul className="footer__link-list">
-              {/* [PLACEHOLDER] 替换为真实邮箱 */}
               <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
               <li><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
@@ -63,8 +55,8 @@ function Footer() {
 
         {/* 底部版权栏 */}
         <div className="footer__bottom">
-          <span>© {currentYear} XVisualSim. All rights reserved.</span>
-          <span>Built for research and engineering.</span>
+          <span>© {currentYear} XVisualSim. {t('footer.copyright')}</span>
+          <span>{t('footer.builtFor')}</span>
         </div>
       </div>
     </footer>

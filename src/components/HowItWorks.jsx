@@ -1,62 +1,59 @@
 import ScrollReveal from './ScrollReveal'
+import { useTranslation } from 'react-i18next'
 
 /**
  * How It Works Section — 仿真流水线流程图
- *
- * 6 步流程可视化，对应实际 pipeline.py 的数据流:
- *   SceneObject → Source+Detector → RayField → RayCaster → PostProcess → Exporter
  */
 
-const STEPS = [
-  {
-    num: 1,
-    icon: '🧊',
-    title: '3D Model Input',
-    desc: 'Load mesh models (STL/OBJ) with configurable dimensions and orientation',
-  },
-  {
-    num: 2,
-    icon: '⚗️',
-    title: 'Material Assignment',
-    desc: 'Assign attenuation coefficients (μ) to define material X-ray absorption',
-  },
-  {
-    num: 3,
-    icon: '📐',
-    title: 'Geometry Setup',
-    desc: 'Configure source position, detector geometry, resolution, and SSAA scaling',
-  },
-  {
-    num: 4,
-    icon: '✴️',
-    title: 'Ray Tracing',
-    desc: 'GPU-accelerated ray casting through BVH-optimized mesh with depth counting',
-  },
-  {
-    num: 5,
-    icon: '📷',
-    title: 'Projection & Post-Process',
-    desc: 'Beer-Lambert integration, SSAA downsampling, blur and noise injection',
-  },
-  {
-    num: 6,
-    icon: '📦',
-    title: 'Output & Export',
-    desc: 'Generate projection images, COCO-RLE annotations, and scan metadata',
-  },
-]
-
 function HowItWorks() {
+  const { t } = useTranslation()
+
+  const STEPS = [
+    {
+      num: 1,
+      icon: '🧊',
+      title: t('pipeline.steps.step1.title'),
+      desc: t('pipeline.steps.step1.desc'),
+    },
+    {
+      num: 2,
+      icon: '⚗️',
+      title: t('pipeline.steps.step2.title'),
+      desc: t('pipeline.steps.step2.desc'),
+    },
+    {
+      num: 3,
+      icon: '📐',
+      title: t('pipeline.steps.step3.title'),
+      desc: t('pipeline.steps.step3.desc'),
+    },
+    {
+      num: 4,
+      icon: '✴️',
+      title: t('pipeline.steps.step4.title'),
+      desc: t('pipeline.steps.step4.desc'),
+    },
+    {
+      num: 5,
+      icon: '📷',
+      title: t('pipeline.steps.step5.title'),
+      desc: t('pipeline.steps.step5.desc'),
+    },
+    {
+      num: 6,
+      icon: '📦',
+      title: t('pipeline.steps.step6.title'),
+      desc: t('pipeline.steps.step6.desc'),
+    },
+  ]
+
   return (
     <section className="section" id="pipeline">
       <div className="container">
         <ScrollReveal>
-          <span className="section__label">Workflow</span>
-          <h2 className="section__title">How It Works</h2>
-          <p className="section__subtitle">
-            From 3D model to annotated X-ray projection — a streamlined
-            simulation pipeline optimized for throughput and fidelity.
-          </p>
+          <span className="section__label">{t('pipeline.label')}</span>
+          <h2 className="section__title">{t('pipeline.title')}</h2>
+          <p className="section__subtitle">{t('pipeline.subtitle')}</p>
         </ScrollReveal>
 
         <ScrollReveal delay={1}>

@@ -1,51 +1,48 @@
 import ScrollReveal from './ScrollReveal'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Use Cases / Applications Section — 应用场景
- *
- * 5 个应用场景卡片，使用图标 + 文案形式
- * 涵盖: 工业检测、算法验证、缺陷分析、数据合成、科研教学
  */
 
-const USE_CASES = [
-  {
-    icon: '🏭',
-    title: 'Industrial Inspection',
-    desc: 'Simulate X-ray imaging for manufacturing quality control, weld inspection, and assembly verification workflows.',
-  },
-  {
-    icon: '🧪',
-    title: 'Algorithm Validation',
-    desc: 'Generate ground-truth projection pairs for benchmarking defect detection, segmentation, and reconstruction algorithms.',
-  },
-  {
-    icon: '🔎',
-    title: 'Defect Analysis',
-    desc: 'Study the detectability of structural defects — cracks, voids, inclusions — under varying imaging configurations.',
-  },
-  {
-    icon: '📊',
-    title: 'Synthetic Data Augmentation',
-    desc: 'Produce large-scale annotated datasets (COCO-RLE format) for training and fine-tuning deep learning vision models.',
-  },
-  {
-    icon: '🎓',
-    title: 'Research & Education',
-    desc: 'Explore X-ray physics principles, CT reconstruction theory, and imaging geometry in a controlled simulation environment.',
-  },
-]
-
 function UseCases() {
+  const { t } = useTranslation()
+
+  const USE_CASES = [
+    {
+      icon: '🏭',
+      title: t('useCases.items.industrial.title'),
+      desc: t('useCases.items.industrial.desc'),
+    },
+    {
+      icon: '🧪',
+      title: t('useCases.items.algo.title'),
+      desc: t('useCases.items.algo.desc'),
+    },
+    {
+      icon: '🔎',
+      title: t('useCases.items.defect.title'),
+      desc: t('useCases.items.defect.desc'),
+    },
+    {
+      icon: '📊',
+      title: t('useCases.items.data.title'),
+      desc: t('useCases.items.data.desc'),
+    },
+    {
+      icon: '🎓',
+      title: t('useCases.items.research.title'),
+      desc: t('useCases.items.research.desc'),
+    },
+  ]
+
   return (
     <section className="section" id="usecases">
       <div className="container">
         <ScrollReveal>
-          <span className="section__label">Applications</span>
-          <h2 className="section__title">Use Cases</h2>
-          <p className="section__subtitle">
-            XVisualSim serves a range of applications across industrial,
-            academic, and data-engineering domains.
-          </p>
+          <span className="section__label">{t('useCases.label')}</span>
+          <h2 className="section__title">{t('useCases.title')}</h2>
+          <p className="section__subtitle">{t('useCases.subtitle')}</p>
         </ScrollReveal>
 
         <div className="usecases__grid">

@@ -1,53 +1,49 @@
 import ScrollReveal from './ScrollReveal'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Gallery / Media Section — 项目图库
  *
- * 3列网格布局的图片画廊，支持点击预览 (Lightbox)
- * 所有 6 张图片为占位 SVG，后续替换为:
- *   - 仿真截图、流程演示视频、对比结果图、GIF 动画
- *
  * @param {Function} onImageClick - 点击图片回调，触发 Lightbox
  */
 
-const GALLERY_ITEMS = [
-  {
-    src: 'gallery-1.svg',
-    alt: 'Cone-beam projection setup visualization',
-  },
-  {
-    src: 'gallery-2.svg',
-    alt: 'Multi-angle CT scan sequence',
-  },
-  {
-    src: 'gallery-3.svg',
-    alt: 'Detector geometry configuration',
-  },
-  {
-    src: 'gallery-4.svg',
-    alt: 'SSAA anti-aliasing comparison',
-  },
-  {
-    src: 'gallery-5.svg',
-    alt: 'Material attenuation visualization',
-  },
-  {
-    src: 'gallery-6.svg',
-    alt: 'Automated annotation overlay',
-  },
-]
-
 function Gallery({ onImageClick }) {
+  const { t } = useTranslation()
+
+  const GALLERY_ITEMS = [
+    {
+      src: 'gallery-1.svg',
+      alt: t('gallery.altTexts.g1'),
+    },
+    {
+      src: 'gallery-2.svg',
+      alt: t('gallery.altTexts.g2'),
+    },
+    {
+      src: 'gallery-3.svg',
+      alt: t('gallery.altTexts.g3'),
+    },
+    {
+      src: 'gallery-4.svg',
+      alt: t('gallery.altTexts.g4'),
+    },
+    {
+      src: 'gallery-5.svg',
+      alt: t('gallery.altTexts.g5'),
+    },
+    {
+      src: 'gallery-6.svg',
+      alt: t('gallery.altTexts.g6'),
+    },
+  ]
+
   return (
     <section className="section" id="gallery">
       <div className="container">
         <ScrollReveal>
-          <span className="section__label">Media</span>
-          <h2 className="section__title">Project Gallery</h2>
-          <p className="section__subtitle">
-            Visual documentation of XVisualSim's simulation outputs,
-            configuration interfaces, and analytical results.
-          </p>
+          <span className="section__label">{t('gallery.label')}</span>
+          <h2 className="section__title">{t('gallery.title')}</h2>
+          <p className="section__subtitle">{t('gallery.subtitle')}</p>
         </ScrollReveal>
 
         <ScrollReveal delay={1}>

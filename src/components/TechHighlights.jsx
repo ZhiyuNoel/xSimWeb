@@ -1,50 +1,47 @@
 import ScrollReveal from './ScrollReveal'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Technical Highlights Section — 技术亮点
- *
- * 以克制的方式展示项目技术能力，避免虚构性能数字
- * 使用 <benchmark> 占位符标记需要后续替换的量化指标
  */
 
-const HIGHLIGHTS = [
-  {
-    title: 'Flexible Geometry Definition',
-    desc: 'Arbitrary source, detector, and object positioning in 3D space. Detector orientation via Euler angle rotation supports non-standard imaging setups.',
-  },
-  {
-    title: 'High-Throughput Simulation Pipeline',
-    desc: 'Mesh and BVH structures are loaded once and shared across all frames in a scan sequence. Only the ray field is regenerated per frame, minimizing per-frame overhead.',
-  },
-  {
-    title: 'Multi-Trajectory Scan Support',
-    desc: 'Built-in trajectory generators for cone beam, dome (spherical), planar cone beam, and fully arbitrary scan paths. Extensible via a clean abstract base class.',
-  },
-  {
-    title: 'Integration-Ready Output',
-    desc: 'Each simulation frame exports projection images, COCO-RLE annotations, and structured JSON metadata — directly consumable by downstream vision tasks and ML pipelines.',
-  },
-  {
-    title: 'Focal Spot Modeling',
-    desc: 'Supports Gaussian-weighted focal spot sampling for realistic finite-source simulation. Per-focal-point memory management prevents VRAM overflow at high resolutions.',
-  },
-  {
-    title: 'Physically Grounded Attenuation',
-    desc: 'Depth-counting based ray traversal handles nested and overlapping geometry correctly. Cumulative path length computation enables accurate Beer-Lambert intensity mapping.',
-  },
-]
-
 function TechHighlights() {
+  const { t } = useTranslation()
+
+  const HIGHLIGHTS = [
+    {
+      title: t('tech.items.h1.title'),
+      desc: t('tech.items.h1.desc'),
+    },
+    {
+      title: t('tech.items.h2.title'),
+      desc: t('tech.items.h2.desc'),
+    },
+    {
+      title: t('tech.items.h3.title'),
+      desc: t('tech.items.h3.desc'),
+    },
+    {
+      title: t('tech.items.h4.title'),
+      desc: t('tech.items.h4.desc'),
+    },
+    {
+      title: t('tech.items.h5.title'),
+      desc: t('tech.items.h5.desc'),
+    },
+    {
+      title: t('tech.items.h6.title'),
+      desc: t('tech.items.h6.desc'),
+    },
+  ]
+
   return (
     <section className="section" id="tech">
       <div className="container">
         <ScrollReveal>
-          <span className="section__label">Engineering</span>
-          <h2 className="section__title">Technical Highlights</h2>
-          <p className="section__subtitle">
-            Design decisions and implementation details that define XVisualSim's
-            simulation approach.
-          </p>
+          <span className="section__label">{t('tech.label')}</span>
+          <h2 className="section__title">{t('tech.title')}</h2>
+          <p className="section__subtitle">{t('tech.subtitle')}</p>
         </ScrollReveal>
 
         <div className="tech__grid">

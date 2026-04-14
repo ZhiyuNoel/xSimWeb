@@ -1,59 +1,55 @@
 import ScrollReveal from './ScrollReveal'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Results Showcase Section — 仿真结果展示
  *
- * 展示 5 组仿真结果卡片，每张卡片可点击打开 Lightbox 预览
- * 所有图片为占位 SVG，后续替换为真实仿真截图
- *
  * @param {Function} onImageClick - 点击图片回调，触发 Lightbox
  */
 
-const RESULTS = [
-  {
-    tag: 'Projection',
-    title: 'Simulated X-Ray Projections',
-    desc: 'High-resolution cone-beam projections with SSAA anti-aliasing, demonstrating sharp geometric detail preservation.',
-    image: 'result-projection.svg',
-  },
-  {
-    tag: 'Geometry',
-    title: 'Multi-Angle Geometry Comparison',
-    desc: 'Projection outputs across varying source–detector configurations, illustrating geometric magnification and perspective effects.',
-    image: 'result-geometry.svg',
-  },
-  {
-    tag: 'Sensitivity',
-    title: 'Parameter Sensitivity Analysis',
-    desc: 'Systematic exploration of attenuation coefficient (μ), focal spot size, and detector resolution on output image quality.',
-    image: 'result-sensitivity.svg',
-  },
-  {
-    tag: 'Defect Analysis',
-    title: 'Defect Visibility Examples',
-    desc: 'Simulated projections with embedded structural defects, showing detection sensitivity under controlled imaging conditions.',
-    image: 'result-defect.svg',
-  },
-  {
-    tag: 'Comparison',
-    title: 'Qualitative Visual Comparison',
-    desc: 'Side-by-side qualitative comparison between simulated projections and reference images for validation purposes.',
-    image: 'result-comparison.svg',
-  },
-]
-
 function Results({ onImageClick }) {
+  const { t } = useTranslation()
+
+  const RESULTS = [
+    {
+      tag: t('results.items.proj.tag'),
+      title: t('results.items.proj.title'),
+      desc: t('results.items.proj.desc'),
+      image: 'result-projection.svg',
+    },
+    {
+      tag: t('results.items.geom.tag'),
+      title: t('results.items.geom.title'),
+      desc: t('results.items.geom.desc'),
+      image: 'result-geometry.svg',
+    },
+    {
+      tag: t('results.items.sens.tag'),
+      title: t('results.items.sens.title'),
+      desc: t('results.items.sens.desc'),
+      image: 'result-sensitivity.svg',
+    },
+    {
+      tag: t('results.items.defect.tag'),
+      title: t('results.items.defect.title'),
+      desc: t('results.items.defect.desc'),
+      image: 'result-defect.svg',
+    },
+    {
+      tag: t('results.items.comp.tag'),
+      title: t('results.items.comp.title'),
+      desc: t('results.items.comp.desc'),
+      image: 'result-comparison.svg',
+    },
+  ]
+
   return (
     <section className="section" id="results">
       <div className="container">
         <ScrollReveal>
-          <span className="section__label">Showcase</span>
-          <h2 className="section__title">Simulation Results</h2>
-          <p className="section__subtitle">
-            Representative outputs from the XVisualSim engine, demonstrating
-            projection quality, parameter exploration, and analytical
-            capabilities.
-          </p>
+          <span className="section__label">{t('results.label')}</span>
+          <h2 className="section__title">{t('results.title')}</h2>
+          <p className="section__subtitle">{t('results.subtitle')}</p>
         </ScrollReveal>
 
         <div className="results__grid">

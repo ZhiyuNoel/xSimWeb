@@ -1,4 +1,5 @@
 import ScrollReveal from './ScrollReveal'
+import { useTranslation } from 'react-i18next'
 
 /**
  * About / Overview Section — 项目概述
@@ -9,51 +10,29 @@ import ScrollReveal from './ScrollReveal'
  */
 
 function About() {
+  const { t } = useTranslation()
+
   return (
     <section className="section" id="about">
       <div className="container">
         <ScrollReveal>
-          <span className="section__label">Overview</span>
-          <h2 className="section__title">What Is XVisualSim?</h2>
+          <span className="section__label">{t('about.label')}</span>
+          <h2 className="section__title">{t('about.title')}</h2>
         </ScrollReveal>
 
         <div className="about__grid">
           {/* 文字说明区 */}
           <ScrollReveal>
             <div className="about__text">
-              <p>
-                XVisualSim is a GPU-accelerated X-ray imaging simulation engine
-                designed for researchers and engineers working in industrial
-                inspection, non-destructive testing (NDT), and computed
-                tomography (CT). It enables high-fidelity digital reproduction
-                of X-ray imaging processes — from source emission to detector
-                capture — entirely in silico.
-              </p>
+              <p>{t('about.p1')}</p>
 
-              <p>
-                The engine provides a complete simulation pipeline: configurable
-                source–object–detector geometry, physically grounded
-                Beer-Lambert attenuation, cone-beam projection with focal spot
-                sampling, SSAA anti-aliasing, and automated annotation
-                generation. Multiple CT scan trajectories — including cone beam,
-                dome, planar, and arbitrary paths — are supported natively.
-              </p>
+              <p>{t('about.p2')}</p>
 
-              <p>
-                Built on NVIDIA Warp GPU kernels and PyTorch CUDA, XVisualSim
-                is optimized for throughput-critical workflows such as synthetic
-                data generation, parameter exploration, and algorithm
-                validation, where conventional physical experiments would be
-                prohibitively slow or expensive.
-              </p>
+              <p>{t('about.p3')}</p>
 
               {/* 代码不公开声明 */}
               <div className="about__highlight-box">
-                <p>
-                  "The full implementation is not publicly released at this
-                  stage. This website serves as a technical showcase of the
-                  project's capabilities and results."
-                </p>
+                <p>{t('about.highlight')}</p>
               </div>
             </div>
           </ScrollReveal>

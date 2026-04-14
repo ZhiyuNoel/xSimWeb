@@ -1,4 +1,5 @@
 import ScrollReveal from './ScrollReveal'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Hero Section — 首屏视觉冲击区
@@ -8,6 +9,8 @@ import ScrollReveal from './ScrollReveal'
  */
 
 function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section className="hero" id="hero">
       {/* 背景发光装饰 */}
@@ -20,34 +23,31 @@ function Hero() {
           <ScrollReveal>
             <div className="hero__badge">
               <span className="hero__badge-dot" />
-              GPU-Accelerated Simulation Engine
+              {t('hero.badge')}
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={1}>
             <h1 className="hero__title">
-              <span className="hero__title-highlight">XVisualSim</span>
+              <span className="hero__title-highlight">{t('hero.title1')}</span>
               <br />
-              X-Ray Image Simulation
+              {t('hero.title2')}
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={2}>
             <p className="hero__description">
-              A high-fidelity, GPU-accelerated X-ray imaging simulation engine
-              for industrial inspection, algorithm validation, and synthetic
-              data generation. Built on cone-beam projection with physically
-              grounded attenuation modeling.
+              {t('hero.description')}
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={3}>
             <div className="hero__actions">
               <a href="#results" className="btn btn--primary">
-                ▸ View Results
+                {t('hero.btnResults')}
               </a>
               <a href="#contact" className="btn btn--outline">
-                Request Demo
+                {t('hero.btnContact')}
               </a>
             </div>
           </ScrollReveal>
@@ -55,18 +55,16 @@ function Hero() {
           <ScrollReveal delay={4}>
             <div className="hero__stats">
               <div>
-                {/* [PLACEHOLDER] 替换为实际指标 */}
-                <div className="hero__stat-value">GPU</div>
-                <div className="hero__stat-label">Accelerated</div>
+                <div className="hero__stat-value">{t('hero.stat1Value')}</div>
+                <div className="hero__stat-label">{t('hero.stat1Label')}</div>
               </div>
               <div>
-                <div className="hero__stat-value">CUDA</div>
-                <div className="hero__stat-label">Warp Kernels</div>
+                <div className="hero__stat-value">{t('hero.stat2Value')}</div>
+                <div className="hero__stat-label">{t('hero.stat2Label')}</div>
               </div>
               <div>
-                {/* [PLACEHOLDER] 替换为实际支持的轨迹数 */}
-                <div className="hero__stat-value">4+</div>
-                <div className="hero__stat-label">Scan Modes</div>
+                <div className="hero__stat-value">{t('hero.stat3Value')}</div>
+                <div className="hero__stat-label">{t('hero.stat3Label')}</div>
               </div>
             </div>
           </ScrollReveal>
@@ -84,10 +82,10 @@ function Hero() {
 
             {/* 浮动装饰卡片 */}
             <div className="hero__float-card hero__float-card--top">
-              ⚡ <strong>Cone-Beam</strong> Projection
+              ⚡ <strong>{t('hero.floatCardTop1')}</strong> {t('hero.floatCardTop2')}
             </div>
             <div className="hero__float-card hero__float-card--bottom">
-              🎯 <strong>SSAA</strong> Anti-Aliasing
+              🎯 <strong>{t('hero.floatCardBottom1')}</strong> {t('hero.floatCardBottom2')}
             </div>
           </div>
         </div>

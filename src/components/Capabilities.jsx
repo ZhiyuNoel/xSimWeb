@@ -1,61 +1,53 @@
 import ScrollReveal from './ScrollReveal'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Key Capabilities Section — 核心能力展示
- *
- * 6 张功能卡片，内容基于实际代码库已实现的功能模块:
- *   - engine/kernels.py → GPU Ray Casting
- *   - core/ (Source, Detector, SceneObject) → Configurable Geometry
- *   - pipeline.py Beer-Lambert → Attenuation Modeling
- *   - scan/ (4种轨迹) → Multi-Trajectory CT
- *   - postprocess/annotation.py → Annotation Generation
- *   - postprocess/image_effects.py + SSAA → Post-Processing
  */
 
-const CAPABILITIES = [
-  {
-    icon: '⚡',
-    title: 'GPU-Accelerated Ray Casting',
-    desc: 'High-performance ray–mesh intersection powered by NVIDIA Warp GPU kernels. BVH acceleration structures are pre-built and cached for multi-frame reuse, enabling efficient CT scan sequences.',
-  },
-  {
-    icon: '🔧',
-    title: 'Configurable Imaging Geometry',
-    desc: 'Fully parameterized source, detector, and object definitions. Supports arbitrary 3D positioning, detector rotation via Euler angles, adjustable resolution, and pixel pitch configuration.',
-  },
-  {
-    icon: '🔬',
-    title: 'Material-Aware Attenuation',
-    desc: 'Physically grounded Beer-Lambert attenuation modeling with depth-counting for nested geometry handling. Computes cumulative path lengths through volumetric objects for accurate intensity mapping.',
-  },
-  {
-    icon: '🌐',
-    title: 'Multi-Trajectory CT Scanning',
-    desc: 'Native support for multiple scan trajectories: standard cone beam, dome (spherical), planar cone beam, and arbitrary user-defined paths loaded from JSON pose sequences.',
-  },
-  {
-    icon: '🏷️',
-    title: 'Synthetic Data & Annotations',
-    desc: 'Automated COCO-RLE instance segmentation annotation generation. Each projection output includes paired images and machine-readable labels for direct use in vision model training pipelines.',
-  },
-  {
-    icon: '🎨',
-    title: 'Post-Processing Pipeline',
-    desc: 'Integrated post-processing with SSAA super-sampling anti-aliasing, Gaussian blur, and fractal texture noise injection for realistic image degradation simulation.',
-  },
-]
-
 function Capabilities() {
+  const { t } = useTranslation()
+
+  const CAPABILITIES = [
+    {
+      icon: '⚡',
+      title: t('capabilities.items.gpu.title'),
+      desc: t('capabilities.items.gpu.desc'),
+    },
+    {
+      icon: '🔧',
+      title: t('capabilities.items.geometry.title'),
+      desc: t('capabilities.items.geometry.desc'),
+    },
+    {
+      icon: '🔬',
+      title: t('capabilities.items.attenuation.title'),
+      desc: t('capabilities.items.attenuation.desc'),
+    },
+    {
+      icon: '🌐',
+      title: t('capabilities.items.trajectory.title'),
+      desc: t('capabilities.items.trajectory.desc'),
+    },
+    {
+      icon: '🏷️',
+      title: t('capabilities.items.annotation.title'),
+      desc: t('capabilities.items.annotation.desc'),
+    },
+    {
+      icon: '🎨',
+      title: t('capabilities.items.postProcess.title'),
+      desc: t('capabilities.items.postProcess.desc'),
+    },
+  ]
+
   return (
     <section className="section" id="capabilities">
       <div className="container">
         <ScrollReveal>
-          <span className="section__label">Core Features</span>
-          <h2 className="section__title">Key Capabilities</h2>
-          <p className="section__subtitle">
-            A modular simulation engine covering the full X-ray imaging pipeline
-            — from ray generation to annotated output.
-          </p>
+          <span className="section__label">{t('capabilities.label')}</span>
+          <h2 className="section__title">{t('capabilities.title')}</h2>
+          <p className="section__subtitle">{t('capabilities.subtitle')}</p>
         </ScrollReveal>
 
         <div className="capabilities__grid">

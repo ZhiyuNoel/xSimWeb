@@ -1,0 +1,158 @@
+{
+  "navbar": {
+    "about": "About",
+    "capabilities": "Capabilities",
+    "pipeline": "Pipeline",
+    "results": "Results",
+    "useCases": "Use Cases",
+    "gallery": "Gallery",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "badge": "GPU-Accelerated Simulation Engine",
+    "title1": "XVisualSim",
+    "title2": "X-Ray Image Simulation",
+    "description": "A high-fidelity, GPU-accelerated X-ray imaging simulation engine for industrial inspection, algorithm validation, and synthetic data generation. Built on cone-beam projection with physically grounded attenuation modeling.",
+    "btnResults": "▸ View Results",
+    "btnContact": "Request Demo",
+    "stat1Value": "GPU",
+    "stat1Label": "Accelerated",
+    "stat2Value": "CUDA",
+    "stat2Label": "Warp Kernels",
+    "stat3Value": "4+",
+    "stat3Label": "Scan Modes",
+    "floatCardTop1": "Cone-Beam",
+    "floatCardTop2": "Projection",
+    "floatCardBottom1": "SSAA",
+    "floatCardBottom2": "Anti-Aliasing"
+  },
+  "about": {
+    "label": "Overview",
+    "title": "What Is XVisualSim?",
+    "p1": "XVisualSim is a GPU-accelerated X-ray imaging simulation engine designed for researchers and engineers working in industrial inspection, non-destructive testing (NDT), and computed tomography (CT). It enables high-fidelity digital reproduction of X-ray imaging processes — from source emission to detector capture — entirely in silico.",
+    "p2": "The engine provides a complete simulation pipeline: configurable source–object–detector geometry, physically grounded Beer-Lambert attenuation, cone-beam projection with focal spot sampling, SSAA anti-aliasing, and automated annotation generation. Multiple CT scan trajectories — including cone beam, dome, planar, and arbitrary paths — are supported natively.",
+    "p3": "Built on NVIDIA Warp GPU kernels and PyTorch CUDA, XVisualSim is optimized for throughput-critical workflows such as synthetic data generation, parameter exploration, and algorithm validation, where conventional physical experiments would be prohibitively slow or expensive.",
+    "highlight": "\"The full implementation is not publicly released at this stage. This website serves as a technical showcase of the project's capabilities and results.\""
+  },
+  "capabilities": {
+    "label": "Core Features",
+    "title": "Key Capabilities",
+    "subtitle": "A modular simulation engine covering the full X-ray imaging pipeline — from ray generation to annotated output.",
+    "items": {
+      "gpu": {
+        "title": "GPU-Accelerated Ray Casting",
+        "desc": "High-performance ray–mesh intersection powered by NVIDIA Warp GPU kernels. BVH acceleration structures are pre-built and cached for multi-frame reuse, enabling efficient CT scan sequences."
+      },
+      "geometry": {
+        "title": "Configurable Imaging Geometry",
+        "desc": "Fully parameterized source, detector, and object definitions. Supports arbitrary 3D positioning, detector rotation via Euler angles, adjustable resolution, and pixel pitch configuration."
+      },
+      "attenuation": {
+        "title": "Material-Aware Attenuation",
+        "desc": "Physically grounded Beer-Lambert attenuation modeling with depth-counting for nested geometry handling. Computes cumulative path lengths through volumetric objects for accurate intensity mapping."
+      },
+      "trajectory": {
+        "title": "Multi-Trajectory CT Scanning",
+        "desc": "Native support for multiple scan trajectories: standard cone beam, dome (spherical), planar cone beam, and arbitrary user-defined paths loaded from JSON pose sequences."
+      },
+      "annotation": {
+        "title": "Synthetic Data & Annotations",
+        "desc": "Automated COCO-RLE instance segmentation annotation generation. Each projection output includes paired images and machine-readable labels for direct use in vision model training pipelines."
+      },
+      "postProcess": {
+        "title": "Post-Processing Pipeline",
+        "desc": "Integrated post-processing with SSAA super-sampling anti-aliasing, Gaussian blur, and fractal texture noise injection for realistic image degradation simulation."
+      }
+    }
+  },
+  "pipeline": {
+    "label": "Workflow",
+    "title": "How It Works",
+    "subtitle": "From 3D model to annotated X-ray projection — a streamlined simulation pipeline optimized for throughput and fidelity.",
+    "steps": {
+      "step1": { "title": "3D Model Input", "desc": "Load mesh models (STL/OBJ) with configurable dimensions and orientation" },
+      "step2": { "title": "Material Assignment", "desc": "Assign attenuation coefficients (μ) to define material X-ray absorption" },
+      "step3": { "title": "Geometry Setup", "desc": "Configure source position, detector geometry, resolution, and SSAA scaling" },
+      "step4": { "title": "Ray Tracing", "desc": "GPU-accelerated ray casting through BVH-optimized mesh with depth counting" },
+      "step5": { "title": "Projection & Post-Process", "desc": "Beer-Lambert integration, SSAA downsampling, blur and noise injection" },
+      "step6": { "title": "Output & Export", "desc": "Generate projection images, COCO-RLE annotations, and scan metadata" }
+    }
+  },
+  "results": {
+    "label": "Showcase",
+    "title": "Simulation Results",
+    "subtitle": "Representative outputs from the XVisualSim engine, demonstrating projection quality, parameter exploration, and analytical capabilities.",
+    "items": {
+      "proj": { "tag": "Projection", "title": "Simulated X-Ray Projections", "desc": "High-resolution cone-beam projections with SSAA anti-aliasing, demonstrating sharp geometric detail preservation." },
+      "geom": { "tag": "Geometry", "title": "Multi-Angle Geometry Comparison", "desc": "Projection outputs across varying source–detector configurations, illustrating geometric magnification and perspective effects." },
+      "sens": { "tag": "Sensitivity", "title": "Parameter Sensitivity Analysis", "desc": "Systematic exploration of attenuation coefficient (μ), focal spot size, and detector resolution on output image quality." },
+      "defect": { "tag": "Defect Analysis", "title": "Defect Visibility Examples", "desc": "Simulated projections with embedded structural defects, showing detection sensitivity under controlled imaging conditions." },
+      "comp": { "tag": "Comparison", "title": "Qualitative Visual Comparison", "desc": "Side-by-side qualitative comparison between simulated projections and reference images for validation purposes." }
+    }
+  },
+  "useCases": {
+    "label": "Applications",
+    "title": "Use Cases",
+    "subtitle": "XVisualSim serves a range of applications across industrial, academic, and data-engineering domains.",
+    "items": {
+      "industrial": { "title": "Industrial Inspection", "desc": "Simulate X-ray imaging for manufacturing quality control, weld inspection, and assembly verification workflows." },
+      "algo": { "title": "Algorithm Validation", "desc": "Generate ground-truth projection pairs for benchmarking defect detection, segmentation, and reconstruction algorithms." },
+      "defect": { "title": "Defect Analysis", "desc": "Study the detectability of structural defects — cracks, voids, inclusions — under varying imaging configurations." },
+      "data": { "title": "Synthetic Data Augmentation", "desc": "Produce large-scale annotated datasets (COCO-RLE format) for training and fine-tuning deep learning vision models." },
+      "research": { "title": "Research & Education", "desc": "Explore X-ray physics principles, CT reconstruction theory, and imaging geometry in a controlled simulation environment." }
+    }
+  },
+  "tech": {
+    "label": "Engineering",
+    "title": "Technical Highlights",
+    "subtitle": "Design decisions and implementation details that define XVisualSim's simulation approach.",
+    "items": {
+      "h1": { "title": "Flexible Geometry Definition", "desc": "Arbitrary source, detector, and object positioning in 3D space. Detector orientation via Euler angle rotation supports non-standard imaging setups." },
+      "h2": { "title": "High-Throughput Simulation Pipeline", "desc": "Mesh and BVH structures are loaded once and shared across all frames in a scan sequence. Only the ray field is regenerated per frame, minimizing per-frame overhead." },
+      "h3": { "title": "Multi-Trajectory Scan Support", "desc": "Built-in trajectory generators for cone beam, dome (spherical), planar cone beam, and fully arbitrary scan paths. Extensible via a clean abstract base class." },
+      "h4": { "title": "Integration-Ready Output", "desc": "Each simulation frame exports projection images, COCO-RLE annotations, and structured JSON metadata — directly consumable by downstream vision tasks and ML pipelines." },
+      "h5": { "title": "Focal Spot Modeling", "desc": "Supports Gaussian-weighted focal spot sampling for realistic finite-source simulation. Per-focal-point memory management prevents VRAM overflow at high resolutions." },
+      "h6": { "title": "Physically Grounded Attenuation", "desc": "Depth-counting based ray traversal handles nested and overlapping geometry correctly. Cumulative path length computation enables accurate Beer-Lambert intensity mapping." }
+    }
+  },
+  "gallery": {
+    "label": "Media",
+    "title": "Project Gallery",
+    "subtitle": "Visual documentation of XVisualSim's simulation outputs, configuration interfaces, and analytical results.",
+    "altTexts": {
+      "g1": "Cone-beam projection setup visualization",
+      "g2": "Multi-angle CT scan sequence",
+      "g3": "Detector geometry configuration",
+      "g4": "SSAA anti-aliasing comparison",
+      "g5": "Material attenuation visualization",
+      "g6": "Automated annotation overlay"
+    }
+  },
+  "faq": {
+    "label": "Questions",
+    "title": "Frequently Asked Questions",
+    "q1": "Is the source code publicly available?",
+    "a1": "The full implementation of XVisualSim is not publicly released at this stage. This website serves as a technical showcase of the project's capabilities, simulation results, and potential applications. If you are interested in collaboration or licensing inquiries, please reach out via the contact section.",
+    "q2": "What types of X-ray scenarios can XVisualSim represent?",
+    "a2": "XVisualSim supports cone-beam X-ray projection with configurable source–object–detector geometry. It can simulate a wide range of industrial X-ray imaging setups, including standard radiography, multi-angle inspection, and cone-beam CT scan sequences with various trajectory patterns (cone beam, dome, planar, arbitrary).",
+    "q3": "Can XVisualSim be used for synthetic dataset generation?",
+    "a3": "Yes. One of the primary use cases is generating large-scale annotated synthetic datasets. Each projection is output with paired COCO-RLE instance segmentation annotations, making the data directly usable for training object detection and segmentation models.",
+    "q4": "Is this project intended for research or production use?",
+    "a4": "XVisualSim is designed primarily as a research and engineering tool. It has been used for algorithm validation, parameter exploration, and synthetic data generation. While the simulation pipeline is robust and optimized for throughput, production deployment considerations (e.g., clinical or safety-critical compliance) are outside its current scope.",
+    "q5": "What hardware is required to run the simulation engine?",
+    "a5": "XVisualSim requires an NVIDIA GPU with CUDA support. It is built on NVIDIA Warp for GPU-accelerated ray tracing and PyTorch CUDA for tensor operations. The specific GPU memory requirements depend on the mesh complexity, detector resolution, and SSAA scaling factor."
+  },
+  "footer": {
+    "desc": "A GPU-accelerated X-ray image simulation engine for industrial inspection, algorithm validation, and synthetic data generation.",
+    "sectionsTitle": "Sections",
+    "resourcesTitle": "Resources",
+    "contactTitle": "Contact",
+    "links": {
+      "github": "GitHub Profile",
+      "pub": "Publication (coming soon)",
+      "demo": "Demo Video (coming soon)"
+    },
+    "copyright": "All rights reserved.",
+    "builtFor": "Built for research and engineering."
+  }
+}
