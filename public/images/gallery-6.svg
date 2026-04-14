@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#0f1724" rx="6"/>
+  <text x="200" y="25" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="10" font-weight="600">ANNOTATION OVERLAY</text>
+  <!-- 投影图底图 -->
+  <rect x="60" y="40" width="280" height="200" rx="4" fill="#0a0e17" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="80" y="60" width="240" height="160" rx="2" fill="rgba(148,163,184,0.05)"/>
+  <!-- 物体轮廓 -->
+  <rect x="120" y="80" width="160" height="120" rx="3" fill="rgba(148,163,184,0.08)" stroke="rgba(148,163,184,0.15)"/>
+  <!-- 分割标注覆盖 -->
+  <rect x="140" y="100" width="60" height="80" rx="2" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <text x="170" y="145" text-anchor="middle" fill="#3b82f6" font-family="Inter,sans-serif" font-size="8" font-weight="600">ID: 1</text>
+  <rect x="210" y="110" width="50" height="60" rx="2" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <text x="235" y="145" text-anchor="middle" fill="#06b6d4" font-family="Inter,sans-serif" font-size="8" font-weight="600">ID: 2</text>
+  <!-- COCO 格式标签 -->
+  <rect x="60" y="250" width="280" height="30" rx="4" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.04)"/>
+  <text x="200" y="270" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">{"segmentation": {"counts": "...", "size": [H, W]}}</text>
+  <text x="200" y="290" text-anchor="middle" fill="#475569" font-family="Inter,sans-serif" font-size="10">[PLACEHOLDER] COCO-RLE annotation</text>
+</svg>

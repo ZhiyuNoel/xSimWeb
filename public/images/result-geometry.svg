@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" fill="#111827" rx="8"/>
+  <text x="320" y="25" text-anchor="middle" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" font-weight="600">MULTI-ANGLE GEOMETRY COMPARISON</text>
+  <!-- 3 个不同角度的投影 -->
+  <g>
+    <rect x="30" y="45" width="180" height="180" rx="4" fill="#0a0e17" stroke="rgba(255,255,255,0.06)"/>
+    <text x="120" y="70" text-anchor="middle" fill="#3b82f6" font-family="Inter,sans-serif" font-size="10" font-weight="600">θ = 0°</text>
+    <rect x="70" y="90" width="100" height="120" rx="3" fill="rgba(148,163,184,0.1)"/>
+    <rect x="85" y="110" width="70" height="80" rx="2" fill="rgba(148,163,184,0.15)"/>
+  </g>
+  <g>
+    <rect x="230" y="45" width="180" height="180" rx="4" fill="#0a0e17" stroke="rgba(255,255,255,0.06)"/>
+    <text x="320" y="70" text-anchor="middle" fill="#06b6d4" font-family="Inter,sans-serif" font-size="10" font-weight="600">θ = 45°</text>
+    <rect x="260" y="90" width="120" height="120" rx="3" fill="rgba(148,163,184,0.1)" transform="rotate(12 320 150)"/>
+    <rect x="280" y="110" width="80" height="80" rx="2" fill="rgba(148,163,184,0.15)" transform="rotate(12 320 150)"/>
+  </g>
+  <g>
+    <rect x="430" y="45" width="180" height="180" rx="4" fill="#0a0e17" stroke="rgba(255,255,255,0.06)"/>
+    <text x="520" y="70" text-anchor="middle" fill="#8b5cf6" font-family="Inter,sans-serif" font-size="10" font-weight="600">θ = 90°</text>
+    <rect x="480" y="85" width="80" height="130" rx="3" fill="rgba(148,163,184,0.1)"/>
+    <rect x="495" y="100" width="50" height="100" rx="2" fill="rgba(148,163,184,0.15)"/>
+  </g>
+  <!-- 几何示意图 -->
+  <rect x="30" y="245" width="580" height="120" rx="6" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.04)"/>
+  <circle cx="120" cy="305" r="6" fill="#3b82f6"/><text x="140" y="309" fill="#64748b" font-family="Inter,sans-serif" font-size="10">Front view</text>
+  <circle cx="280" cy="305" r="6" fill="#06b6d4"/><text x="300" y="309" fill="#64748b" font-family="Inter,sans-serif" font-size="10">Oblique 45°</text>
+  <circle cx="440" cy="305" r="6" fill="#8b5cf6"/><text x="460" y="309" fill="#64748b" font-family="Inter,sans-serif" font-size="10">Side view</text>
+  <text x="320" y="380" text-anchor="middle" fill="#475569" font-family="Inter,sans-serif" font-size="11">[PLACEHOLDER] Replace with actual geometry comparison</text>
+</svg>

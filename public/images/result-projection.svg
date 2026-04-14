@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" fill="#111827" rx="8"/>
+  <!-- 模拟 X-ray 投影图 -->
+  <rect x="40" y="30" width="260" height="300" rx="4" fill="#0a0e17" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="170" y="20" text-anchor="middle" fill="#64748b" font-family="Inter,sans-serif" font-size="10" font-weight="600">SIMULATED PROJECTION</text>
+  <!-- 伪 X-ray 投影效果 -->
+  <ellipse cx="170" cy="160" rx="80" ry="110" fill="rgba(148,163,184,0.08)"/>
+  <rect x="130" y="100" width="80" height="120" rx="4" fill="rgba(148,163,184,0.12)"/>
+  <rect x="145" y="140" width="20" height="30" rx="2" fill="rgba(148,163,184,0.2)"/>
+  <circle cx="190" cy="200" r="10" fill="rgba(148,163,184,0.15)"/>
+  <!-- 灰度条 -->
+  <rect x="310" y="30" width="15" height="300" rx="3" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <defs><linearGradient id="gray" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e2e8f0"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect x="312" y="32" width="11" height="296" rx="2" fill="url(#gray)" opacity="0.5"/>
+  <!-- 信息面板 -->
+  <rect x="360" y="30" width="240" height="300" rx="6" fill="rgba(17,24,39,0.5)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="380" y="60" fill="#94a3b8" font-family="Inter,sans-serif" font-size="11" font-weight="600">Parameters</text>
+  <text x="380" y="90" fill="#64748b" font-family="monospace" font-size="10">Resolution: 1024 × 1024</text>
+  <text x="380" y="110" fill="#64748b" font-family="monospace" font-size="10">SSAA: 2×</text>
+  <text x="380" y="130" fill="#64748b" font-family="monospace" font-size="10">μ: 0.25 mm⁻¹</text>
+  <text x="380" y="150" fill="#64748b" font-family="monospace" font-size="10">Source: (0, 0, -200) mm</text>
+  <text x="380" y="170" fill="#64748b" font-family="monospace" font-size="10">Detector: (0, 0, 100) mm</text>
+  <!-- 直方图占位 -->
+  <rect x="380" y="200" width="200" height="100" rx="4" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <text x="480" y="258" text-anchor="middle" fill="#475569" font-family="Inter,sans-serif" font-size="9">Intensity Histogram</text>
+  <g fill="#3b82f6" opacity="0.5">
+    <rect x="390" y="270" width="8" height="20" rx="1"/><rect x="402" y="260" width="8" height="30" rx="1"/>
+    <rect x="414" y="240" width="8" height="50" rx="1"/><rect x="426" y="230" width="8" height="60" rx="1"/>
+    <rect x="438" y="220" width="8" height="70" rx="1"/><rect x="450" y="235" width="8" height="55" rx="1"/>
+    <rect x="462" y="250" width="8" height="40" rx="1"/><rect x="474" y="260" width="8" height="30" rx="1"/>
+    <rect x="486" y="270" width="8" height="20" rx="1"/><rect x="498" y="275" width="8" height="15" rx="1"/>
+    <rect x="510" y="280" width="8" height="10" rx="1"/><rect x="522" y="282" width="8" height="8" rx="1"/>
+    <rect x="534" y="285" width="8" height="5" rx="1"/><rect x="546" y="286" width="8" height="4" rx="1"/>
+    <rect x="558" y="287" width="8" height="3" rx="1"/>
+  </g>
+  <text x="320" y="380" text-anchor="middle" fill="#475569" font-family="Inter,sans-serif" font-size="11">[PLACEHOLDER] Replace with actual projection result</text>
+</svg>

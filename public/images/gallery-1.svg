@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#0f1724" rx="6"/>
+  <circle cx="100" cy="80" r="8" fill="#3b82f6" opacity="0.8"/>
+  <circle cx="100" cy="80" r="25" fill="#3b82f6" opacity="0.1"/>
+  <polygon points="100,80 280,130 280,250" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="0.5" opacity="0.5"/>
+  <line x1="100" y1="80" x2="280" y2="130" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+  <line x1="100" y1="80" x2="280" y2="250" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+  <rect x="170" y="150" width="40" height="70" rx="3" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="1"/>
+  <line x1="280" y1="120" x2="280" y2="260" stroke="#22d3ee" stroke-width="2"/>
+  <text x="200" y="280" text-anchor="middle" fill="#475569" font-family="Inter,sans-serif" font-size="10">[PLACEHOLDER] Cone-beam setup</text>
+</svg>
