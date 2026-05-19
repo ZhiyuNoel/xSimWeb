@@ -76,7 +76,7 @@ function Hero() {
             {/* [PLACEHOLDER] 替换为仿真结果图 / 装置结构图 */}
             <img
               className="hero__visual-image"
-              src={`${import.meta.env.BASE_URL}images/hero-simulation.svg`}
+              src={`${import.meta.env.BASE_URL}images/Hero_Simulation.png`}
               alt="X-ray simulation visualization"
             />
 
