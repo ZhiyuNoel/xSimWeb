@@ -15,13 +15,13 @@ function Results({ onImageClick }) {
       tag: t('results.items.proj.tag'),
       title: t('results.items.proj.title'),
       desc: t('results.items.proj.desc'),
-      image: 'result-projection.svg',
+      image: 'Projection.png',
     },
     {
       tag: t('results.items.geom.tag'),
       title: t('results.items.geom.title'),
       desc: t('results.items.geom.desc'),
-      image: 'result-geometry.svg',
+      image: 'planar.gif',
     },
     {
       tag: t('results.items.sens.tag'),
@@ -40,6 +40,12 @@ function Results({ onImageClick }) {
       title: t('results.items.comp.title'),
       desc: t('results.items.comp.desc'),
       image: 'result-comparison.svg',
+    },
+    {
+      tag: t('results.items.seg.tag'),
+      title: t('results.items.seg.title'),
+      desc: t('results.items.seg.desc'),
+      image: 'Masks.png',
     },
   ]
 

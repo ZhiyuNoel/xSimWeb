@@ -87,7 +87,8 @@
       "geom": { "tag": "Geometry", "title": "Multi-Angle Geometry Comparison", "desc": "Projection outputs across varying source–detector configurations, illustrating geometric magnification and perspective effects." },
       "sens": { "tag": "Sensitivity", "title": "Parameter Sensitivity Analysis", "desc": "Systematic exploration of attenuation coefficient (μ), focal spot size, and detector resolution on output image quality." },
       "defect": { "tag": "Defect Analysis", "title": "Defect Visibility Examples", "desc": "Simulated projections with embedded structural defects, showing detection sensitivity under controlled imaging conditions." },
-      "comp": { "tag": "Comparison", "title": "Qualitative Visual Comparison", "desc": "Side-by-side qualitative comparison between simulated projections and reference images for validation purposes." }
+      "comp": { "tag": "Comparison", "title": "Qualitative Visual Comparison", "desc": "Side-by-side qualitative comparison between simulated projections and reference images for validation purposes." },
+      "seg": { "tag": "Segmentation Labels", "title": "Automatic Precise Segmentation Label Generation", "desc": "Pixel-level segmentation labels are generated alongside simulated projections, providing consistent ground truth for defect detection, object recognition, and deep learning workflows." }
     }
   },
   "useCases": {
