@@ -39,7 +39,7 @@ function Results({ onImageClick }) {
       tag: t('results.items.comp.tag'),
       title: t('results.items.comp.title'),
       desc: t('results.items.comp.desc'),
-      image: 'result-comparison.svg',
+      image: 'Compare.png',
     },
     {
       tag: t('results.items.seg.tag'),
